@@ -154,22 +154,20 @@ const Explore = ({text}:Props) : JSX.Element => {
               />
             </Typography>
           <Typography variant={'h4'} fontWeight={700}>
-            Simple IPLD Car Explorer
+            Simple Car Explorer
           </Typography>
           <Typography>
-            IPFS CAR Content-Addressed Archive Explorer
-          </Typography>
-          <Typography>
-            Upload your CAR, explore the content.
+            IPFS CAR - Content-Addressed Archive Explorer.
+            Upload your CAR file and explore the contents.
           </Typography>
         </Box>
-
       &nbsp;&nbsp;
       <Divider />
       &nbsp;&nbsp;
       <form onSubmit={uploadWithFormData}>
-        <input type="file" onChange={handleFileChange}  accept=".car" />
-        <Button type="submit" variant="contained" color="primary">
+        <input type="file" onChange={handleFileChange}  accept=".car"  />
+        &nbsp;&nbsp;
+        <Button type="submit" variant="contained" color="primary" sx={{marginTop:'10px'}}>
           Upload
           {/*<Box component={'img'} src={spinnerUpload} height={20}  />*/}
         </Button>
@@ -197,11 +195,13 @@ const Explore = ({text}:Props) : JSX.Element => {
                     },
                   }}
               >
-                <Typography key={cid.toString()}>
-                  CID:
-                  <a href={`https://ipfs.io/ipfs/${cid.toString()}`} target="_blank" rel="noopener noreferrer">
-                    {cid.toString()}
-                  </a>
+                <Typography key={cid.toString()} variant={'body1'}>
+                  CID: &nbsp;
+
+                    <a href={`https://ipfs.io/ipfs/${cid.toString()}`} target="_blank" rel="noopener noreferrer">
+                      {cid.toString()}
+                    </a>
+
                 </Typography>
               </Box>
               {/*<Box*/}
