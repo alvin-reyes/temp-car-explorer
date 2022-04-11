@@ -171,7 +171,7 @@ const Explore = ({text}:Props) : JSX.Element => {
         <input type="file" onChange={handleFileChange}  accept=".car" />
         <Button type="submit" variant="contained" color="primary">
           Upload
-          <Box component={'img'} src={spinnerUpload} height={20}  />
+          {/*<Box component={'img'} src={spinnerUpload} height={20}  />*/}
         </Button>
       </form>
       &nbsp;&nbsp;
@@ -204,22 +204,22 @@ const Explore = ({text}:Props) : JSX.Element => {
                   </a>
                 </Typography>
               </Box>
-              <Box
-                  padding={1}
-                  bgcolor={alpha(theme.palette.divider, 0.03)}
-                  display={'flex'}
-                  justifyContent={'left'}
-                  alignItems={'left'}
-                  sx={{
-                    '& img': {
-                      borderRadius: 2,
-                    },
-                  }}
-              >
-                <Typography key={cid.toString()}>
-                  Multihash: {cid.multihash.code.toString(16)}
-                </Typography>
-              </Box>
+              {/*<Box*/}
+              {/*    padding={1}*/}
+              {/*    bgcolor={alpha(theme.palette.divider, 0.03)}*/}
+              {/*    display={'flex'}*/}
+              {/*    justifyContent={'left'}*/}
+              {/*    alignItems={'left'}*/}
+              {/*    sx={{*/}
+              {/*      '& img': {*/}
+              {/*        borderRadius: 2,*/}
+              {/*      },*/}
+              {/*    }}*/}
+              {/*>*/}
+              {/*  <Typography key={cid.toString()}>*/}
+              {/*    Multihash: {cid.multihash.code.toString(16)}*/}
+              {/*  </Typography>*/}
+              {/*</Box>*/}
 
               <Box
                   padding={1}
